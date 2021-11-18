@@ -4,12 +4,6 @@ function sieve(n) {
         numbers[i - 1] = i;
     }
     
-    function array_map(f, arr) {
-        for (let j = 0; j < arr.length; j = j + 1) {
-            arr[j] = f(arr[j]);
-        }
-    }
-    
     function is_prime(n) {
         if (n <= 1) { return false; }
         function helper(n, a) {
@@ -33,13 +27,13 @@ function sieve(n) {
     
     // start with the first prime: 2
     for (let l = 2; l < last_mult + 1; l = l + 1) {
-        array_map(x => x === null 
+        numbers = numbers.map(x => x === null 
                     ? null 
                     : x === l
                     ? x
                     : x % l === 0 
                     ? null 
-                    : x, numbers);
+                    : x);
     }
     
     let primes = [];
