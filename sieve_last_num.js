@@ -38,7 +38,7 @@ function sieve(n) {
     
     let prime = null;
     
-    // m starts from 1 to remove 1 from the list of primes
+    // to find the last prime number
     for (let m = numbers.length - 1; m > 1; m = m - 1) {
         if (numbers[m] !== null) {
             prime = numbers[m];
