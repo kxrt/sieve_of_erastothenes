@@ -51,6 +51,5 @@ function sieve(n) {
         sum = sum + primes[n];
     }
     
-    console.log(sum);
-    // return sum;
+    return sum;
 }
