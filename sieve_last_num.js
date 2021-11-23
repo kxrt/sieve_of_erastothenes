@@ -46,6 +46,5 @@ function sieve(n) {
         }
     }
   
-    console.log(prime);
-    // return prime;
+    return prime;
 }
