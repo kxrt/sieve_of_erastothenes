@@ -4,17 +4,15 @@ function sieve(n) {
         numbers[i - 1] = i;
     }
     
-    function is_prime(n) {
-        if (n <= 1) { return false; }
-        function helper(n, a) {
-            return n % a === 0 
-                ? n === a 
-                    ? true 
-                    : false
-                : helper(n, a + 1);
+    function isPrime(n) {
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0) {
+                return false;
+            }
         }
-        return helper(n, 2);
+        return n > 1;
     }
+    
     let last_mult = Math.floor(Math.sqrt(n));
     
     // to find the last prime multiple to divide through by
