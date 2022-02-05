@@ -1,6 +1,6 @@
 function sieve(n) {
     let numbers = [];
-    for (let i = 1; i < n + 1; i = i + 1) {
+    for (let i = 1; i < n + 1; i++) {
         numbers[i - 1] = i;
     }
     
@@ -16,7 +16,7 @@ function sieve(n) {
     let last_mult = Math.floor(Math.sqrt(n));
     
     // to find the last prime multiple to divide through by
-    for (let k = last_mult; k > 0; k = k - 1) {
+    for (let k = last_mult; k > 0; k--) {
         if (is_prime(k) || k === 1) {
             last_mult = k;
             break;
@@ -24,7 +24,7 @@ function sieve(n) {
     }
     
     // start with the first prime: 2
-    for (let l = 2; l < last_mult + 1; l = l + 1) {
+    for (let l = 2; l < last_mult + 1; l++) {
         numbers = numbers.map(x => x === null 
                     ? null 
                     : x === l
@@ -37,7 +37,7 @@ function sieve(n) {
     let prime = null;
     
     // to find the last prime number
-    for (let m = numbers.length - 1; m > 1; m = m - 1) {
+    for (let m = numbers.length - 1; m > 1; m--) {
         if (numbers[m] !== null) {
             prime = numbers[m];
             break;
